@@ -37,7 +37,7 @@ vue를 사용해서 토큰 로그인기능을 처리해보고 싶어서 스프�
 ---
 ## Project setup
 ### backend  
-- eclipse에서 spring-web 프로젝트 import 
+- eclipse에서 simpleBoard 프로젝트 import 
 - mariadb에서 maria_web 데이터베이스 생성
 
 - 데이터베이스에 테이블생성 (/spring-web/createTable.txt)
