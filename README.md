@@ -51,13 +51,6 @@ spring.datasource.password = password
 - Sprigboot 실행(3000포트)
 
 
-### frontend (Node버젼 10.16.1)
-```
-cd frontend
-npm install
-npm run serve
-```
-- 브라우저에서 localhost:8080/ 실행
 
 
 
