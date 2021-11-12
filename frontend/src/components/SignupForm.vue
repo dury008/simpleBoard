@@ -14,8 +14,8 @@
           placeholder="login"
           v-model="username"
         />
-        <div v-show="!this.username">
-          <small style="color: red">아이디를 입력하세요</small>
+        <div v-show="this.username.length <= 6">
+          <small style="color: red">아이디를 입력하세요(6자이상)</small>
         </div>
         <input
           type="text"
@@ -25,15 +25,15 @@
           placeholder="password"
           v-model="password"
         />
-        <div v-show="!this.password">
-          <small style="color: red">비밀번호를 입력하세요</small>
+        <div v-show="this.password.length <= 6">
+          <small style="color: red">비밀번호를 입력하세요(6자이상)</small>
         </div>
         <input
           type="text"
           id="email"
           class="fadeIn third mb-3"
           name="email"
-          placeholder="password"
+          placeholder="email"
           v-model="email"
         />
         <div class="mb-3" v-show="!isValidateEmail">
@@ -43,7 +43,11 @@
           type="submit"
           class="fadeIn fourth"
           value="register"
-          v-show="isValidateEmail && this.username && this.password"
+          v-show="
+            isValidateEmail &&
+            this.username.length > 6 &&
+            this.password.length > 6
+          "
         />
       </form>
     </div>
